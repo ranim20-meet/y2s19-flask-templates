@@ -8,9 +8,9 @@
 <body>
 	<h1>My favourite food: sushi</h1>
 	<p>Sushi is so deliciously addictive. It is really good and healthy for you and Authority Reports will tell you more, delving into the benefits of Omega-3 fatty acids, so richly found in salmon. I remember my first time tasting sushi with an old friend. Tasting that wasabi, thinking it was avocado, spitting it out  and finally getting back into it a few months later. I just love it. It makes me feel good. There are so many options of what you can do with its ingredients and its just so aesthetically beautiful. I love the story of sushi as well.</p>
-	<script>
+	<!-- <script>
 		list_length = parseInt(prompt("How many foods would you like to see?"))
-	</script>
+	</script> -->
 	<!-- trying to use input -->
 	<!-- {% macro input(name, value='', type='text', size=20) -%}
     	<input type="{{ type }}" name="{{ name }}" value="{{
@@ -22,15 +22,15 @@
 	{% if not opposite_day %}
 		<h2>List of favourite foods:</h2>
 		<ul>
-			{% for food in range(list_length) %}
-				<li> {{foods[food]}} </li>
+			{% for food in foods%}
+				<li> {{food}} </li>
 			{% endfor %}
 		</ul>
 	{% else %}
 		<h2>Least of favourite foods:</h2>
 		<ul>
-			{% for food in range(list_length) %}
-				<li> {{least_food[food]}} </li>
+			{% for food in least_food %}
+				<li> {{food}} </li>
 			{% endfor %}
 		</ul>
 	{% endif %}
